@@ -17,7 +17,7 @@ class GodleHaxePlugin : Plugin<Project> {
         with(project1) {
             //Set the default value for this property.
             if(!project1.hasProperty("haxe.root")) {
-                project1.extensions.extraProperties.set("haxe.root", System.getenv("USER") + "/.haxe/lib")
+                project1.extensions.extraProperties.set("haxe.root", System.getenv("HOME") + "/.haxe/lib")
             }
             val initHaxe = tasks.register("initHaxe") {
                 with(it) {
