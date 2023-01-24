@@ -77,6 +77,12 @@ class GodleHaxePlugin : Plugin<Project> {
                     commandLine(godleHaxeExtension.getHaxeLibBinary())
                     args("run", "hxgodot", "generate_bindings", "-y")
 
+                    afterEvaluate {
+                        if(godleHaxeExtension.godotJsonBindingPath.isPresent){
+                            args("--extension-api-json="+godleHaxeExtension.godotJsonBindingPath.get())
+                        }
+                    }
+
                     outputs.upToDateWhen {
                         File(project.rootDir, "bindings").exists()
                     }

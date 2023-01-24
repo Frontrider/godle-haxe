@@ -7,7 +7,6 @@ import javax.inject.Inject
 
 abstract class HaxeDependencies @Inject constructor(val project: Project) {
 
-
     init {
         add("hxgodot", "https://github.com/HxGodot/hxgodot.git")
     }
