@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "io.github.frontrider.godle"
-version = "0.1.1"
+version = "0.1.2"
 
 repositories {
     mavenCentral()
@@ -79,10 +79,10 @@ gradlePlugin {
 
     plugins {
         create("godle") {
-            id = group.toString()
+            id = "$group-haxe"
             displayName = "Godle-Haxe"
             implementationClass = "io.github.frontrider.godle.haxe.GodleHaxePlugin"
-            description = "Sets up Gaxe for Godot game development."
+            description = "Sets up Haxe for Godot game development."
         }
     }
     testSourceSets(functionalTest)

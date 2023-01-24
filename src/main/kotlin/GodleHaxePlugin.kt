@@ -122,7 +122,7 @@ class GodleHaxePlugin : Plugin<Project> {
                         with(it) {
                             group = internalTaskGroup
                             description = "build haxe for ${os.osName}, with a $target target"
-                            dependsOn(initHXGodot)
+                            dependsOn(initHaxe)
                             commandLine(rootDir.absolutePath + "/.gradle/python/bin/scons")
                             args("platform=${os.haxePlatform}", "target=$target")
                         }
